@@ -1868,7 +1868,7 @@ class Accelerator:
             return data_loader
         if device_placement is None:
             device_placement = self.device_placement if self.distributed_type != DistributedType.TPU else False
-        print(self.num_processes)
+        print("self.num_processes", self.num_processes)
         prepared_data_loader = prepare_data_loader(
             data_loader,
             self.device,
